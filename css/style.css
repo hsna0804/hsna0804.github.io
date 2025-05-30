@@ -4,6 +4,12 @@
     --text-color: #333;
     --background-color: #f5f6fa;
     --section-padding: 4rem 2rem;
+    
+    /* Font Options - Uncomment the one you prefer */
+    /* --heading-font: 'Space Grotesk', sans-serif; */  /* Modern tech look */
+    /* --heading-font: 'Syne', sans-serif; */     /* Ultra-modern, geometric */
+    --heading-font: 'Chakra Petch', sans-serif; /* Futuristic, tech */
+    --body-font: 'Chakra Petch', sans-serif;
 }
 
 * {
@@ -13,19 +19,17 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--body-font);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    display: none;
 }
 
 nav ul {
@@ -47,7 +51,9 @@ nav a:hover {
 }
 
 main {
-    margin-top: 4rem;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
 }
 
 section {
@@ -56,38 +62,137 @@ section {
 
 #hero {
     text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../images/SF\ nightview.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
+    margin: 0;
 }
 
-h1 {
-    font-size: 3rem;
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Increased from 0.3 to 0.4 for 10% darker */
+    z-index: 1;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    padding-top: 0;
+    position: relative;
+}
+
+.hero-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.separator {
+    width: 300px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2rem auto;
+    position: relative;
+    left: 0;
+    transform: none;
+}
+
+.decorative-lines {
+    position: relative;
+    margin-top: 2rem;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.decorative-lines::before {
+    display: none;
+}
+
+.decorative-lines::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#hero h1 {
+    font-family: var(--heading-font);
+    font-size: 4.2rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+#hero p {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    letter-spacing: 0.01em;
 }
 
 h2 {
+    font-family: var(--heading-font);
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 h3 {
+    font-family: var(--heading-font);
     font-size: 1.8rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
-.work-item, .project-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.work-item, .project-item, .education-item {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.work-item h4, .education-item h4 {
+    color: #e0e0e0;
 }
 
 .date {
-    color: #666;
+    color: #888;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -105,11 +210,12 @@ ul {
 }
 
 .skills-list li {
-    background: var(--secondary-color);
+    background: #2c3e50;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    margin: 0.3rem;
 }
 
 #contact {
@@ -158,15 +264,20 @@ button:hover {
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: transparent;
     color: white;
     text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+    padding: 1rem;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .social-links {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-links a {
@@ -174,10 +285,44 @@ footer {
     font-size: 1.5rem;
     margin: 0 1rem;
     transition: color 0.3s;
+    pointer-events: auto;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .social-links a:hover {
-    color: var(--secondary-color);
+    color: #FF8C00;
+}
+
+.hero-nav {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+}
+
+.hero-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.hero-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Design */
@@ -207,4 +352,114 @@ footer {
     #contact {
         margin: 1rem;
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #121212;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    color: white;
+}
+
+.modal-content h2 {
+    color: white;
+}
+
+.modal-content h3 {
+    color: #FF8C00;
+}
+
+.modal-content p {
+    color: #e0e0e0;
+}
+
+.modal-content ul {
+    color: #e0e0e0;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #FF8C00;
+}
+
+.certification-item {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.certification-item h3 {
+    color: #FF8C00;
+    margin-bottom: 0.5rem;
+}
+
+.certification-item p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Ensure modal content is scrollable if too long */
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Scrollbar styling for the modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #FF8C00;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #FFA500;
 } 

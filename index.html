@@ -3,147 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shweta Kadam - Portfolio</title>
+    <title>Hyunsoo Na - Portfolio</title>
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Grotesk:wght@400;600&family=Syne:wght@400;600;800&family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section id="hero">
-            <h1>Shweta Kadam</h1>
-            <p>Hi! I'm Shweta Kadam. I'm a software engineer from Mumbai.<br>
-            Learning new things as I do my best!</p>
-        </section>
-
-        <section id="work">
-            <h2>Work Experience</h2>
-            <div class="work-item">
-                <h3>Associate Consultant</h3>
-                <p class="date">AUGUST 2019 - PRESENT</p>
-                <h4>Oracle Financial Software Services</h4>
-                <p>Working with State Street Global Advisor as Associate Consultant Developer- ETF Basketing Process, Scenario/Idealist, Blotter Management, Fidessa systems integration, Charles River systems integration.</p>
-                <ul>
-                    <li>Spring Framework</li>
-                    <li>WPF</li>
-                </ul>
-            </div>
-
-            <div class="work-item">
-                <h3>Intern</h3>
-                <p class="date">AUGUST 2017 - JANUARY 2018</p>
-                <h4>Tech Skills IT</h4>
-                <p>Worked on an E-Business System website designed to facilitate daily business tasks. Features like Management of employees, management of projects, assigning employees and managers to projects. Security to authenticate users (admin and employees) while accessing resources was implemented.</p>
-                <ul>
-                    <li>Spring Framework Mvc</li>
-                    <li>J2EE</li>
-                    <li>JSTL</li>
-                    <li>Bootstrap</li>
-                </ul>
+            <div class="hero-content">
+                <h1>Hyunsoo Na</h1><br>
+                <p>I'm a PMP-certified project manager, with a PhD in life science,<br>located in the San Francisco Bay Area.</p>
+                <div class="separator"></div><br>
+                <nav class="hero-nav">
+                    <ul>
+                        <li><a href="#" onclick="openModal('about-modal')">About</a></li>
+                        <li><a href="#" onclick="openModal('education-modal')">Education</a></li>
+                        <li><a href="#" onclick="openModal('work-modal')">Work</a></li>
+                        <li><a href="#" onclick="openModal('projects-modal')">Projects</a></li>
+                        <li><a href="#" onclick="openModal('certifications-modal')">Skills</a></li>
+                    </ul>
+                </nav>
+                <div class="decorative-lines"></div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Flipkart Review Scrapper</h3>
-                <p>The goal here originally was to create a dataset of flipkart reviews in the form of csv files which can be further used for sentiment analysis. In addition, scrapped reviews are shown on the webpage using flask and csv files are formed when you execute this project in your system.</p>
-                <ul>
-                    <li>Python</li>
-                    <li>Flask</li>
-                    <li>Selenium</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
+        <!-- Modal for About -->
+        <div id="about-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('about-modal')">&times;</span>
+                <h2 style="color: #FF8C00;">About Me</h2>
+                <br>
+                <div style="display: flex; align-items: flex-start; gap: 20px;">
+                    <div style="flex-shrink: 0;">
+                        <img src="images/Sue.jpg" alt="Hyunsoo Na" style="max-width: 200px; width: 200px; height: auto; border-radius: 10px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <p>Hi! I am <span style="color: #FF8C00;">Hyunsoo</span>.<br>
 
-            <div class="project-item">
-                <h3>Amazon review and rating prediction using RNN & Naive Bayes</h3>
-                <p>An Amazon review and rating prediction system where the model is trained using RNN and Naive Bayes. This model is then fed to the Flask backend which generate predictions and shows the result on the website.</p>
-                <ul>
-                    <li>RNN</li>
-                    <li>Naive Bayes</li>
-                    <li>Python</li>
-                    <li>Flask</li>
-                    <li>Bootstrap</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
+<br>I began my career as a scientist, driven by a deep curiosity about microbes—tiny, invisible organisms that are everywhere and incredibly powerful. My <span style="color: #FF8C00;">passion for science</span> led me to leave my home country, South Korea, and pursue opportunities across the globe.<br><br>
 
-            <div class="project-item">
-                <h3>Interactive Survey Chatbot</h3>
-                <p>This project was Created in a Error 404 Hackathon. The main purpose of the project is to create an interactive CHATBOT Survey forms to replace normal forms.</p>
-                <ul>
-                    <li>Nodejs</li>
-                    <li>Express.js</li>
-                    <li>Bubble.js</li>
-                    <li>Jquery</li>
-                    <li>Mysql db</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>A Little About Me</h2>
-            <p>I'm a Software Engineer that loves to learn and create new things which intrigue me. I currently work at Oracle Financial Software Services (Mumbai, India), holding a Bachelor's Degree in Computer Engineering. I am proficient in Java, Spring Mvc, Spring Boot, Python, Node js, Flask, Mysql, Mongo db & React js. Presently, I am learning aws cloud and trying to build small projects in aws & other cloud technologies.</p>
-            
-            <h3>Current Skills:</h3>
-            <ul class="skills-list">
-                <li>Java</li>
-                <li>Spring Framework</li>
-                <li>Spring Boot</li>
-                <li>Python</li>
-                <li>C#</li>
-                <li>React JS</li>
-                <li>Mysql</li>
-                <li>Mongodb</li>
-                <li>Docker</li>
-                <li>Nodejs</li>
-                <li>Flask</li>
-                <li>J2EE</li>
-                <li>Bootstrap</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+Along the way, I discovered that my true strength lies in <span style="color: #FF8C00;">bringing structure to chaos, communicating science clearly, and collaborating with people from diverse backgrounds</span>. With the support of inspiring senior program managers who mentored me selflessly, and project sponsors who took a chance on me, I successfully transitioned into project management.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                
+                <p><br>I carry with me the inspiration and generosity that others showed me. My <span style="color: #FF8C00;">goal </span>is to pay that forward—to become a source of inspiration for others and to help more people recognize the critical role of project management in <span style="color: #FF8C00;">turning great ideas into successful outcomes</span>.</p>
+                
+                <br><br>
+                <h2 style="color: #FF8C00;">As a Project Manager ..</h2>
+                <p>I'm a Project Manager passionate about bringing interdisciplinary teams together to tackle complex challenges. I lead by fostering <span style="color: #FF8C00;">clarity and alignment</span>, which helps teams stay focused in fast-paced corporate environments where priorities and strategies can shift quickly.
+<br><br>
+With a <span style="color: #FF8C00;">strong technical background</span>, I bridge the gap between technical and commercial teams. I understand the challenges engineers face and ensure <span style="color: #FF8C00;">risks are identified early</span> and clearly communicated. I take ownership of the project's <span style="color: #FF8C00;">"why"</span> and work to keep everyone aligned toward a shared goal.</p>
+            </div>
+        </div>
+
+        <!-- Modal for Work -->
+        <div id="work-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('work-modal')">&times;</span>
+                <h2>Work Experience</h2>
+                <div class="work-item">
+                    <h3>Project Manager</h3>
+                    <p class="date">July 2023 - May 2025</p>
+                    <h4>Lygos, Inc. - Hayward, CA</h4>
+                    <ul>
+                        <li>Lygos is a chemical manufacturing company that produces bio-based chemicals for a more sustainable supply chain.</li>
+                        <li>New product development programs</li>
+                        <li>Strategic program resource planning</li>
+                        <li>Strategic partnership management</li>
+
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+
+                <div class="work-item">
+                    <h3>R&D Project Manager</h3>
+                    <p class="date">June 2022 - July 2023</p>
+                    <h4>Perfect Day, Inc. - Berkeley, CA</h4>
+                    <ul>
+                        <li>Perfect Day is a food biotechnology company that produces proteins, such as whey protein found in milk—using microorganisms through strain engineering, precision fermentation, and downstream processing.</li>
+                        <li>Novel gene-editing technology development program</li>
+                        <li>Manufacturing cost reduction</li>
+                        <li>SaaS implementation</li>
+                    </ul>
                 </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+
+                <div class="work-item">
+                    <h3>Project Manager</h3>
+                    <p class="date">Feb 2019 - June 2022</p>
+                    <h4>Joint Genome Institute - Berkeley, CA</h4>
+                    <ul>
+                        <li>JGI is a US Department of Energy user facility that provides high-throughput genome sequencing and analysis services to the global research community.</li>
+                        <li>Scientific project management</li>
+                        <li>Workflow management & continuous improvement</li>
+                    </ul>
+                </div>
+                
+                <div class="work-item">
+                    <h3>Senior Research Associate</h3>
+                    <p class="date">June 2016 - June 2022</p>
+                    <h4>Joint Genome Institute - Berkeley, CA</h4>
+                    <ul>
+                        <li>NGS product development & scale up (automation)</li>
+                        <li>Validation of latest NGS technologies for potential implementation in the production pipeline</li>
+                    </ul>
+                </div>
+                
+                <div class="work-item">
+                    <h3>Researcher</h3>
+                    <p class="date">Sep 2013 - Apr 2015</p>
+                    <h4>University of Vienna - Vienna,Austria</h4>
+                    <ul>
+                        <li>qPCR and FISH assay development for detecting and quantifying microbial infections in host cells</li>
+                    </ul>
+                </div>
+                
+                <div class="work-item">
+                    <h3>Visiting Researcher</h3>
+                    <p class="date">Feb 2011</p>
+                    <h4>Wageningen University - Wageningen, Netherlands</h4>
+                    <ul>
+                        <li>Investigation of microbial interactions and metabolic pathways</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <h3>Graduate Researcher</h3>
+                    <p class="date">Dec 2009 - May 2013</p>
+                    <h4>Aarhus University - Aarhus, Denmark</h4>
+                    <ul>
+                        <li>Detection of microbial activity (biomarker signatures) in complex biological samples</li>
+                        <li>In-house implementation of the latest NGS platform</li>
+                        <li>Analytical method development (2D IC-MS)</li>
+                    </ul>
+                </div>
+           
+            </div>
+        </div>
+
+        <!-- Modal for Education -->
+        <div id="education-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('education-modal')">&times;</span>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Certificate in Project Management</h3>
+                    <p class="date">2019</p>
+                    <h4>UC Berkeley Extension</h4>
+                    <p> - The following courses were taken to earn the certificate.</p>
+                    <ul>
+                        <li>Project initiation - How to launch successful projects</li>
+                        <li>Project leadership</li>
+                        <li>Schedule & risk management</li>
+                        <li>Project execution and control</li>
+                        <li>Project scope & quality management</li>
+                        <li>Business analysis fundamentals</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <h3>PhD in Bioscience</h3>
+                    <p class="date">Dec 2009 - May 2013</p>
+                    <h4>Aarhus University - Aarhus, Denmark</h4>
+                    <ul>
+                        <li>Investigated microbial activity using DNA-Stable Isotope Probing (SIP) to detect biomarker signatures in complex biological samples <a href="https://enviromicro-journals.onlinelibrary.wiley.com/doi/abs/10.1111/1758-2229.12296" target="_blank" style="color: #FF8C00;">[Publication]</a></li>
+                        <li>Developed and validated in-house protocols for amplicon sequencing workflows on the Ion Torrent NGS platform</li>
+                        <li>Established and optimized a targeted analytical method for small-molecule quantification using 2D Ion Chromatography-Mass Spectrometry</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Projects -->
+        <div id="projects-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('projects-modal')">&times;</span>
+                <h2>Project Examples</h2>
+                <div class="project-item">
+                    <h3>Product Development</h3>
+                    <p>Goal: Secure offtake agreements with customers (certain volume & price)</p>
+                    <ul>
+                        <li>Background - This project was to prepare our bio-based product (to replace petroleum-based products) for scale-up and commercialization in the near future.</li>
+                    </ul>
+                    <h4 style="color: #FF8C00; margin-top: 1rem;">Milestones achieved</h4>
+                    <ul>
+                        <li>Successfully scaled up the process through two contract manufacturers through fermentation, downstream processing, and distillation.</li>
+                        <li>Provided commercially representative samples to customers for evaluation - and continued product development based on customer feedback.</li>
+                        <li>Delivered FEL3 data on schedule for a planned $125M refinery construction.</li>
+                        <li>Agreements signed with customers.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Amazon review and rating prediction using RNN & Naive Bayes</h3>
+                    <p>An Amazon review and rating prediction system where the model is trained using RNN and Naive Bayes. This model is then fed to the Flask backend which generate predictions and shows the result on the website.</p>
+                    <ul>
+                        <li>RNN</li>
+                        <li>Naive Bayes</li>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Bootstrap</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Interactive Survey Chatbot</h3>
+                    <p>This project was Created in a Error 404 Hackathon. The main purpose of the project is to create an interactive CHATBOT Survey forms to replace normal forms.</p>
+                    <ul>
+                        <li>Nodejs</li>
+                        <li>Express.js</li>
+                        <li>Bubble.js</li>
+                        <li>Jquery</li>
+                        <li>Mysql db</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Skills -->
+        <div id="certifications-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('certifications-modal')">&times;</span>
+                <h2>Skills</h2>
+                <div class="certification-item">
+                    <h3>Project Management software</h3>
+                    <ul>
+                        <li>Smartsheet, MS Project, Jira, Asana, ClickUp, Monday.com, Office Timeline, etc.</li>
+                    </ul>
+                </div>
+                <div class="certification-item">
+                    <h3>Artificial Intellignence</h3>
+                    <ul>
+                        <li>Website creation & design</li>
+                        <li>Developing AI Apps for project management</li>
+                        <li>Otter.ai (meeting transcription)</li>
+                    </ul>
+                </div>
+                <div class="certification-item">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English, Korean (native), German (basic)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <footer>
-        <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+    <div id="footer-section" style="position: fixed; bottom: 0; left: 0; width: 100%; background: transparent; text-align: center; padding: 20px; z-index: 9999;">
+        <div style="margin-bottom: 10px;">
+            <a href="https://www.linkedin.com/in/hsoona/" target="_blank" style="color: white; font-size: 24px; margin: 0 15px; text-decoration: none;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/hsna0804" target="_blank" style="color: white; font-size: 24px; margin: 0 15px; text-decoration: none;"><i class="fab fa-github"></i></a>
         </div>
-        <p>&copy; 2024 Shweta Kadam. All rights reserved.</p>
-    </footer>
+        <p style="color: white; margin: 0; font-size: 14px;">&copy; 2025 Hyunsoo Na. All rights reserved.</p>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

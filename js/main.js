@@ -57,4 +57,54 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+// Modal functionality
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const footer = document.getElementById('footer-section');
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent scrolling of background
+    if (footer) {
+        footer.style.display = "none"; // Hide footer when modal is open
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const footer = document.getElementById('footer-section');
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+    if (footer) {
+        footer.style.display = "block"; // Show footer when modal is closed
+    }
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        const footer = document.getElementById('footer-section');
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+        if (footer) {
+            footer.style.display = "block"; // Show footer when modal is closed
+        }
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        const modals = document.getElementsByClassName('modal');
+        const footer = document.getElementById('footer-section');
+        for (let modal of modals) {
+            if (modal.style.display === "block") {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+                if (footer) {
+                    footer.style.display = "block"; // Show footer when modal is closed
+                }
+            }
+        }
+    }
 }); 

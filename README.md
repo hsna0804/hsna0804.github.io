@@ -1,65 +1,134 @@
-# Portfolio Website
+# 🌟 Hyunsoo Na - Portfolio Website
 
-A modern, responsive portfolio website showcasing work experience, projects, and skills. This website is designed to be easily deployable on GitHub Pages.
+A modern, responsive portfolio website showcasing professional experience, education, projects, and skills. This website features an elegant dark theme with interactive modals and smooth animations. 🚀
 
-## Features
+## ✨ Features
 
-- Responsive design that works on all devices
-- Smooth scrolling navigation
-- Interactive contact form
-- Modern UI with animations
-- Skills showcase
-- Project portfolio
-- Work experience timeline
+- 🎨 **Modern Dark Theme**: Sleek black background with San Francisco night view
+- 📱 **Responsive Design**: Works perfectly on all devices and screen sizes
+- 🖼️ **Interactive Modals**: Smooth popup windows for different sections
+- 🎯 **Professional Layout**: Clean, organized presentation of information
+- 🔗 **Social Media Integration**: Direct links to LinkedIn and GitHub
+- ⚡ **Fast Loading**: Optimized for quick page loads
+- 🎭 **Smooth Animations**: CSS animations and transitions
 
-## Technologies Used
+## 🏗️ Website Structure
 
-- HTML5
-- CSS3 (with CSS Variables)
-- JavaScript (Vanilla)
-- Font Awesome for icons
+### 🏠 Landing Page
+- **Hero Section**: Professional introduction with background image
+- **Navigation Menu**: About, Education, Work, Projects, Skills
+- **Footer**: Social media links (LinkedIn & GitHub)
 
-## Deployment to GitHub Pages
+### 📋 Modal Sections
 
-1. Create a new repository on GitHub
-2. Initialize git in this directory:
+#### 👤 About Me
+- Personal introduction and career journey
+- Professional photo
+- Career goals and inspiration
+- Project management philosophy
+
+#### 🎓 Education
+- Certificate in Project Management (UC Berkeley Extension)
+- PhD in Bioscience (Aarhus University, Denmark)
+- Research publications and achievements
+
+#### 💼 Work Experience
+- Project Manager roles at various companies
+- R&D Project Manager experience
+- Research positions and achievements
+- Detailed job descriptions and accomplishments
+
+#### 🚀 Projects
+- Product Development projects
+- Technical achievements and milestones
+- Commercial successes and partnerships
+
+#### 🛠️ Skills
+- Project Management software expertise
+- Artificial Intelligence applications
+- Language proficiencies
+
+## 🌐 Technologies Used
+
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Modern styling with CSS variables and animations
+- **JavaScript**: Interactive functionality and modal management
+- **Font Awesome**: Social media icons
+- **Google Fonts**: Chakra Petch font family for modern typography
+
+## 🚀 Deployment
+
+This website is deployed using **GitHub Pages** and is accessible at:
+`https://hsna0804.github.io/`
+
+### 📦 Deployment Process
+
+1. All files are committed to the `main` branch
+2. GitHub Pages automatically serves the website from the root directory
+3. The `index.html` file serves as the entry point
+4. All assets (CSS, JS, images) are properly linked with relative paths
+
+## 🔧 Local Development
+
+To run this website locally:
+
+1. **Clone the repository**:
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
+   git clone https://github.com/hsna0804/hsna0804.github.io.git
+   cd hsna0804.github.io
    ```
-3. Add your GitHub repository as remote:
+
+2. **Serve locally** (using Python):
    ```bash
-   git remote add origin YOUR_REPOSITORY_URL
-   git branch -M main
-   git push -u origin main
+   # Python 3
+   python -m http.server 8000
+   
+   # Python 2
+   python -m SimpleHTTPServer 8000
    ```
-4. Go to your repository settings on GitHub
-5. Scroll down to "GitHub Pages" section
-6. Select "main" branch as source
-7. Your site will be published at `https://YOUR_USERNAME.github.io/REPOSITORY_NAME`
 
-## Local Development
+3. **Open in browser**: Navigate to `http://localhost:8000`
 
-To run this website locally, you can use any local server. Here's one way using Python:
+## 📁 File Structure
 
-```bash
-# If you have Python 3:
-python -m http.server 8000
-
-# If you have Python 2:
-python -m SimpleHTTPServer 8000
+```
+📦 Portfolio Website
+├── 📄 index.html          # Main HTML file
+├── 📁 css/
+│   └── 📄 style.css       # Stylesheet with dark theme
+├── 📁 js/
+│   └── 📄 main.js         # JavaScript for interactivity
+├── 📁 images/
+│   ├── 🖼️ Sue.jpg         # Professional photo
+│   ├── 🌃 SF nightview.png # Background image
+│   └── 🔗 LinkedIn_Logo.png # Social media assets
+└── 📄 README.md           # This file
 ```
 
-Then open `http://localhost:8000` in your browser.
+## 🎨 Design Features
 
-## Customization
+- **Color Scheme**: Dark theme with orange (#FF8C00) accents
+- **Typography**: Chakra Petch font for modern, tech-inspired look
+- **Layout**: Flexbox for responsive design
+- **Animations**: Smooth modal transitions and hover effects
+- **Accessibility**: High contrast and keyboard navigation support
 
-1. Update the content in `index.html` with your personal information
-2. Modify the colors in `css/style.css` by changing the CSS variables in the `:root` selector
-3. Add your social media links in the footer section of `index.html`
-4. Update the contact form handling in `js/main.js` to work with your preferred backend
+## 📱 Browser Compatibility
 
-## License
+✅ Chrome (recommended)  
+✅ Firefox  
+✅ Safari  
+✅ Edge  
+✅ Mobile browsers  
 
-MIT License - feel free to use this template for your own portfolio! 
+## 🤝 Contributing
+
+This is a personal portfolio website. For suggestions or improvements, please feel free to open an issue or contact me through the social media links on the website.
+
+## 📄 License
+
+MIT License - Feel free to use this template for your own portfolio! 🎉
+
+---
+
+**Built with ❤️ by Hyunsoo Na** | **Deployed on GitHub Pages** 🚀 
