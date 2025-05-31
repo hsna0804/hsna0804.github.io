@@ -286,14 +286,14 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1000 !important;
+    z-index: 50 !important;
 }
 
-/* Make footer icons clickable with very high z-index */
+/* Make footer icons clickable but below navigation */
 .social-links {
     margin-bottom: 10px;
     position: relative;
-    z-index: 1001;
+    z-index: 51;
 }
 
 .social-links a {
@@ -305,11 +305,16 @@ footer {
     cursor: pointer;
     text-decoration: none;
     position: relative;
-    z-index: 1001;
+    z-index: 51;
 }
 
-.social-links a:hover {
+/* Only LinkedIn should turn orange on hover, not GitHub */
+.social-links a[href*="linkedin"]:hover {
     color: #FF8C00;
+}
+
+.social-links a[href*="github"]:hover {
+    color: #ffffff;
 }
 
 /* Footer text styling */
@@ -318,14 +323,14 @@ footer {
     margin: 0;
     font-size: 14px;
     position: relative;
-    z-index: 1001;
+    z-index: 51;
 }
 
 .hero-nav {
     margin-top: 1rem;
     margin-bottom: 2rem;
     position: relative;
-    z-index: 200;
+    z-index: 100;
 }
 
 .hero-nav ul {
@@ -348,7 +353,7 @@ footer {
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 200;
+    z-index: 100;
 }
 
 .hero-nav a:hover {
