@@ -364,7 +364,7 @@ footer {
 .hero-nav::after {
     content: '';
     position: absolute;
-    bottom: -2rem;
+    bottom: -4rem;
     left: 50%;
     transform: translateX(-50%);
     width: 300px !important;
@@ -461,7 +461,7 @@ footer {
     /* Adjust navigation line for mobile */
     .hero-nav::after {
         width: 200px !important;
-        bottom: -2rem !important;
+        bottom: -4rem !important;
     }
 
     /* Reduce bottom padding since footer is no longer fixed */
@@ -575,7 +575,7 @@ footer {
     .hero-nav::after {
         width: 200px !important;
         display: block !important;
-        bottom: -2rem !important;
+        bottom: -4rem !important;
     }
 }
 
