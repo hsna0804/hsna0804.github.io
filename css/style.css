@@ -269,16 +269,9 @@ footer {
     pointer-events: auto;
 }
 
-/* Add white line above footer */
+/* Remove white line above footer */
 #footer-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.8);
+    display: none;
 }
 
 /* Make footer icons clickable but below navigation */
@@ -382,10 +375,6 @@ footer {
     .separator {
         width: 300px !important;
     }
-    
-    #footer-section::before {
-        width: 300px !important;
-    }
 }
 
 /* Responsive Design */
@@ -455,7 +444,7 @@ footer {
 
     /* Adjust footer white line for mobile */
     #footer-section::before {
-        width: 200px !important;
+        display: none;
     }
 
     /* Adjust navigation line for mobile */
@@ -565,10 +554,9 @@ footer {
         display: block !important;
     }
 
-    /* Adjust footer white line for landscape */
+    /* Remove footer white line for landscape */
     #footer-section::before {
-        width: 200px !important;
-        display: block !important;
+        display: none;
     }
 
     /* Adjust navigation line for landscape - prevent overlap */
