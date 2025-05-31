@@ -269,9 +269,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin: 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 100;
 }
@@ -282,12 +280,10 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 10 !important;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 /* Make footer icons clickable but below navigation */
@@ -423,17 +419,16 @@ footer {
         text-align: center;
     }
 
-    /* Significantly increase bottom padding to prevent footer overlap */
+    /* Reduce bottom padding since footer is no longer fixed */
     main {
-        padding-bottom: 300px !important;
-        min-height: calc(100vh + 300px) !important;
+        padding-bottom: 50px !important;
+        min-height: 100vh !important;
     }
 
     /* Adjust footer for mobile */
     footer {
         padding: 1.5rem 1rem;
-        position: fixed !important;
-        bottom: 0 !important;
+        position: relative !important;
         z-index: 1000 !important;
     }
 
@@ -491,10 +486,10 @@ footer {
 
 /* Landscape/Horizontal mobile orientation fixes */
 @media (max-width: 768px) and (orientation: landscape) {
-    /* Even more bottom padding for landscape mode */
+    /* Reduce bottom padding since footer is no longer fixed */
     main {
-        padding-bottom: 300px !important;
-        min-height: calc(100vh + 300px) !important;
+        padding-bottom: 50px !important;
+        min-height: 100vh !important;
     }
 
     /* Make navigation more compact in landscape */
@@ -520,8 +515,8 @@ footer {
 
     /* Adjust hero content for landscape */
     #hero {
-        padding: 1rem 0 5rem 0 !important;
-        min-height: calc(100vh + 200px) !important;
+        padding: 1rem 0 2rem 0 !important;
+        min-height: 100vh !important;
         position: relative;
         z-index: 1002 !important;
     }
@@ -534,17 +529,43 @@ footer {
         font-size: 1rem;
     }
 
-    /* Lower footer z-index so it doesn't block navigation */
+    /* Ensure decorative lines appear in landscape mode */
+    .separator {
+        width: 200px;
+        margin: 1.5rem auto;
+        display: block !important;
+    }
+
+    .decorative-lines {
+        width: 200px;
+        margin-top: 1.5rem;
+        display: block !important;
+    }
+
+    .decorative-lines::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.8);
+        display: block !important;
+    }
+
+    /* Footer with relative positioning */
     footer {
         padding: 1rem !important;
         z-index: 999 !important;
-        position: fixed !important;
-        bottom: 0 !important;
+        position: relative !important;
     }
 
-    /* Hide footer in landscape mode to prevent overlap */
+    /* Footer section with relative positioning */
     #footer-section {
-        display: none !important;
+        display: block !important;
+        z-index: 999 !important;
+        background-color: transparent !important;
+        position: relative !important;
     }
 }
 
