@@ -379,16 +379,18 @@ footer {
         text-align: center;
     }
 
-    /* Add more bottom padding to main content to prevent footer overlap */
+    /* Significantly increase bottom padding to prevent footer overlap */
     main {
-        padding-bottom: 150px;
+        padding-bottom: 250px !important;
+        min-height: calc(100vh + 250px) !important;
     }
 
     /* Adjust footer for mobile */
     footer {
         padding: 1.5rem 1rem;
-        position: fixed;
-        bottom: 0;
+        position: fixed !important;
+        bottom: 0 !important;
+        z-index: 1000 !important;
     }
 
     /* Modal responsiveness */
@@ -428,7 +430,8 @@ footer {
 
     /* Additional mobile spacing fixes */
     #hero {
-        padding: 2rem 0;
+        padding: 2rem 0 4rem 0;
+        min-height: calc(100vh + 100px);
     }
 
     .separator {
@@ -444,9 +447,10 @@ footer {
 
 /* Landscape/Horizontal mobile orientation fixes */
 @media (max-width: 768px) and (orientation: landscape) {
-    /* Increase bottom padding significantly for landscape mode */
+    /* Even more bottom padding for landscape mode */
     main {
-        padding-bottom: 200px !important;
+        padding-bottom: 300px !important;
+        min-height: calc(100vh + 300px) !important;
     }
 
     /* Make navigation more compact in landscape */
@@ -465,6 +469,11 @@ footer {
     }
 
     /* Adjust hero content for landscape */
+    #hero {
+        padding: 1rem 0 5rem 0 !important;
+        min-height: calc(100vh + 200px) !important;
+    }
+
     #hero h1 {
         font-size: 2rem;
     }
@@ -475,8 +484,10 @@ footer {
 
     /* Ensure footer doesn't overlap in landscape */
     footer {
-        padding: 1rem;
-        z-index: 1001;
+        padding: 1rem !important;
+        z-index: 1001 !important;
+        position: fixed !important;
+        bottom: 0 !important;
     }
 }
 
