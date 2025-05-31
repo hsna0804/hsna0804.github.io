@@ -378,6 +378,51 @@ footer {
     .separator {
         width: 300px !important;
     }
+    
+    /* Desktop footer styling - ensure footer is visible */
+    #footer-section {
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        z-index: 10 !important;
+        pointer-events: auto;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .social-links {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 11;
+        pointer-events: auto;
+        display: block !important;
+    }
+    
+    .social-links a {
+        color: white;
+        font-size: 24px;
+        margin: 0 15px;
+        transition: color 0.3s;
+        pointer-events: auto;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+        z-index: 11;
+        display: inline-block !important;
+    }
+    
+    #footer-section p {
+        color: white;
+        margin: 0;
+        font-size: 14px;
+        position: relative;
+        z-index: 11;
+        pointer-events: auto;
+        display: block !important;
+    }
 }
 
 /* Responsive Design */
