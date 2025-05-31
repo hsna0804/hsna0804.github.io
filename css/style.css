@@ -457,6 +457,8 @@ footer {
     .hero-nav {
         margin-top: 1rem;
         margin-bottom: 2rem;
+        position: relative;
+        z-index: 1002 !important;
     }
 
     .hero-nav ul {
@@ -466,12 +468,18 @@ footer {
     .hero-nav a {
         padding: 0.8rem 1.5rem;
         width: 180px;
+        position: relative;
+        z-index: 1003 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
     }
 
     /* Adjust hero content for landscape */
     #hero {
         padding: 1rem 0 5rem 0 !important;
         min-height: calc(100vh + 200px) !important;
+        position: relative;
+        z-index: 1002 !important;
     }
 
     #hero h1 {
@@ -482,12 +490,17 @@ footer {
         font-size: 1rem;
     }
 
-    /* Ensure footer doesn't overlap in landscape */
+    /* Lower footer z-index so it doesn't block navigation */
     footer {
         padding: 1rem !important;
-        z-index: 1001 !important;
+        z-index: 999 !important;
         position: fixed !important;
         bottom: 0 !important;
+    }
+
+    /* Hide footer in landscape mode to prevent overlap */
+    #footer-section {
+        display: none !important;
     }
 }
 
