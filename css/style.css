@@ -333,7 +333,7 @@ footer {
     margin-top: 1rem;
     margin-bottom: 2rem;
     position: relative;
-    z-index: 1000;
+    z-index: 9999 !important;
 }
 
 .hero-nav ul {
@@ -342,6 +342,8 @@ footer {
     list-style: none;
     gap: 2rem;
     padding: 0;
+    position: relative;
+    z-index: 9999 !important;
 }
 
 .hero-nav a {
@@ -356,8 +358,10 @@ footer {
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 1000;
-    pointer-events: auto;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: block !important;
 }
 
 .hero-nav a:hover {
