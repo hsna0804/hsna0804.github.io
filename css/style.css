@@ -367,6 +367,18 @@ footer {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Add white line below navigation */
+.hero-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -484,6 +496,11 @@ footer {
     #footer-section::before {
         width: 200px !important;
     }
+
+    /* Adjust navigation line for mobile */
+    .hero-nav::after {
+        width: 200px !important;
+    }
 }
 
 /* Landscape/Horizontal mobile orientation fixes */
@@ -540,6 +557,12 @@ footer {
 
     /* Adjust footer white line for landscape */
     #footer-section::before {
+        width: 200px !important;
+        display: block !important;
+    }
+
+    /* Adjust navigation line for landscape */
+    .hero-nav::after {
         width: 200px !important;
         display: block !important;
     }
