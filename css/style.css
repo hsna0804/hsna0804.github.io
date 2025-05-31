@@ -269,9 +269,12 @@ footer {
     pointer-events: auto;
 }
 
-/* Remove white line above footer */
+/* Completely remove white line above footer */
 #footer-section::before {
-    display: none;
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Make footer icons clickable but below navigation */
@@ -442,9 +445,12 @@ footer {
         margin: 1.5rem auto;
     }
 
-    /* Adjust footer white line for mobile */
+    /* Completely remove footer white line for mobile */
     #footer-section::before {
-        display: none;
+        display: none !important;
+        content: none !important;
+        width: 0 !important;
+        height: 0 !important;
     }
 
     /* Adjust navigation line for mobile */
@@ -554,9 +560,12 @@ footer {
         display: block !important;
     }
 
-    /* Remove footer white line for landscape */
+    /* Completely remove footer white line for landscape */
     #footer-section::before {
-        display: none;
+        display: none !important;
+        content: none !important;
+        width: 0 !important;
+        height: 0 !important;
     }
 
     /* Adjust navigation line for landscape - prevent overlap */
