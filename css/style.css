@@ -442,6 +442,44 @@ footer {
     }
 }
 
+/* Landscape/Horizontal mobile orientation fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Increase bottom padding significantly for landscape mode */
+    main {
+        padding-bottom: 200px !important;
+    }
+
+    /* Make navigation more compact in landscape */
+    .hero-nav {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-nav ul {
+        gap: 1rem;
+    }
+
+    .hero-nav a {
+        padding: 0.8rem 1.5rem;
+        width: 180px;
+    }
+
+    /* Adjust hero content for landscape */
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    /* Ensure footer doesn't overlap in landscape */
+    footer {
+        padding: 1rem;
+        z-index: 1001;
+    }
+}
+
 /* Modal Styles */
 .modal {
     display: none;
