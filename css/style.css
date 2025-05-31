@@ -120,11 +120,7 @@ section {
 }
 
 .decorative-lines {
-    position: relative;
-    margin-top: 2rem;
-    width: 300px;
-    height: 30px;
-    margin: 0 auto;
+    display: none;
 }
 
 .decorative-lines::before {
@@ -132,13 +128,7 @@ section {
 }
 
 .decorative-lines::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.8);
+    display: none;
 }
 
 #hero h1 {
@@ -284,6 +274,18 @@ footer {
     width: 100%;
     z-index: 10 !important;
     pointer-events: auto;
+}
+
+/* Add white line above footer */
+#footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* Make footer icons clickable but below navigation */
@@ -478,9 +480,9 @@ footer {
         margin: 1.5rem auto;
     }
 
-    .decorative-lines {
-        width: 200px;
-        margin-top: 1.5rem;
+    /* Adjust footer white line for mobile */
+    #footer-section::before {
+        width: 200px !important;
     }
 }
 
@@ -529,43 +531,17 @@ footer {
         font-size: 1rem;
     }
 
-    /* Ensure decorative lines appear in landscape mode */
+    /* Ensure footer white line appears in landscape mode */
     .separator {
         width: 200px;
         margin: 1.5rem auto;
         display: block !important;
     }
 
-    .decorative-lines {
-        width: 200px;
-        margin-top: 1.5rem;
+    /* Adjust footer white line for landscape */
+    #footer-section::before {
+        width: 200px !important;
         display: block !important;
-    }
-
-    .decorative-lines::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.8);
-        display: block !important;
-    }
-
-    /* Footer with relative positioning */
-    footer {
-        padding: 1rem !important;
-        z-index: 999 !important;
-        position: relative !important;
-    }
-
-    /* Footer section with relative positioning */
-    #footer-section {
-        display: block !important;
-        z-index: 999 !important;
-        background-color: transparent !important;
-        position: relative !important;
     }
 }
 
