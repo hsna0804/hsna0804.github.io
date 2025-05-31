@@ -281,8 +281,11 @@ footer {
     z-index: 100 !important;
 }
 
+/* Make footer icons clickable with higher z-index */
 .social-links {
     margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 150;
 }
 
 .social-links a {
@@ -293,10 +296,18 @@ footer {
     pointer-events: auto;
     cursor: pointer;
     text-decoration: none;
+    position: relative;
+    z-index: 150;
 }
 
 .social-links a:hover {
     color: #FF8C00;
+}
+
+/* Footer text also needs higher z-index */
+#footer-section p {
+    position: relative;
+    z-index: 150;
 }
 
 .hero-nav {
