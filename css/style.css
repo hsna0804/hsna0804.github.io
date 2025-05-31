@@ -278,22 +278,28 @@ footer {
 
 /* Footer section styling */
 #footer-section {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000 !important;
-    pointer-events: none;
 }
 
 /* Make footer icons clickable with very high z-index */
 .social-links {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
     position: relative;
     z-index: 1001;
-    pointer-events: auto;
 }
 
 .social-links a {
     color: white;
-    font-size: 1.5rem;
-    margin: 0 1rem;
+    font-size: 24px;
+    margin: 0 15px;
     transition: color 0.3s;
     pointer-events: auto;
     cursor: pointer;
@@ -306,11 +312,13 @@ footer {
     color: #FF8C00;
 }
 
-/* Footer text also needs higher z-index */
+/* Footer text styling */
 #footer-section p {
+    color: white;
+    margin: 0;
+    font-size: 14px;
     position: relative;
     z-index: 1001;
-    pointer-events: auto;
 }
 
 .hero-nav {
