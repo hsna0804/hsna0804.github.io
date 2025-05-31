@@ -99,14 +99,7 @@ section {
 }
 
 .hero-content::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.8);
+    display: none;
 }
 
 .separator {
@@ -371,7 +364,7 @@ footer {
 .hero-nav::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
+    bottom: -2rem;
     left: 50%;
     transform: translateX(-50%);
     width: 300px !important;
@@ -431,7 +424,7 @@ footer {
     /* Fix hero navigation for mobile */
     .hero-nav {
         margin-top: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     .hero-nav ul {
@@ -447,6 +440,28 @@ footer {
         display: block;
         width: 200px;
         text-align: center;
+    }
+
+    /* Additional mobile spacing fixes */
+    #hero {
+        padding: 2rem 0 4rem 0;
+        min-height: calc(100vh + 100px);
+    }
+
+    .separator {
+        width: 200px !important;
+        margin: 1.5rem auto;
+    }
+
+    /* Adjust footer white line for mobile */
+    #footer-section::before {
+        width: 200px !important;
+    }
+
+    /* Adjust navigation line for mobile */
+    .hero-nav::after {
+        width: 200px !important;
+        bottom: -2rem !important;
     }
 
     /* Reduce bottom padding since footer is no longer fixed */
@@ -496,27 +511,6 @@ footer {
         top: 0.5rem;
         font-size: 1.8rem;
     }
-
-    /* Additional mobile spacing fixes */
-    #hero {
-        padding: 2rem 0 4rem 0;
-        min-height: calc(100vh + 100px);
-    }
-
-    .separator {
-        width: 200px;
-        margin: 1.5rem auto;
-    }
-
-    /* Adjust footer white line for mobile */
-    #footer-section::before {
-        width: 200px !important;
-    }
-
-    /* Adjust navigation line for mobile */
-    .hero-nav::after {
-        width: 200px !important;
-    }
 }
 
 /* Landscape/Horizontal mobile orientation fixes */
@@ -530,7 +524,7 @@ footer {
     /* Make navigation more compact in landscape */
     .hero-nav {
         margin-top: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         position: relative;
         z-index: 1002 !important;
     }
@@ -550,7 +544,7 @@ footer {
 
     /* Adjust hero content for landscape */
     #hero {
-        padding: 1rem 0 2rem 0 !important;
+        padding: 1rem 0 3rem 0 !important;
         min-height: 100vh !important;
         position: relative;
         z-index: 1002 !important;
@@ -564,9 +558,9 @@ footer {
         font-size: 1rem;
     }
 
-    /* Ensure footer white line appears in landscape mode */
+    /* Ensure all lines are same width in landscape */
     .separator {
-        width: 200px;
+        width: 200px !important;
         margin: 1.5rem auto;
         display: block !important;
     }
@@ -577,10 +571,11 @@ footer {
         display: block !important;
     }
 
-    /* Adjust navigation line for landscape */
+    /* Adjust navigation line for landscape - prevent overlap */
     .hero-nav::after {
         width: 200px !important;
         display: block !important;
+        bottom: -2rem !important;
     }
 }
 
