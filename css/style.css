@@ -425,8 +425,8 @@ footer {
 
     /* Significantly increase bottom padding to prevent footer overlap */
     main {
-        padding-bottom: 250px !important;
-        min-height: calc(100vh + 250px) !important;
+        padding-bottom: 300px !important;
+        min-height: calc(100vh + 300px) !important;
     }
 
     /* Adjust footer for mobile */
