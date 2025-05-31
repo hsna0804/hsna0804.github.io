@@ -374,13 +374,29 @@ footer {
     bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 300px;
+    width: 300px !important;
     height: 2px;
     background: rgba(255, 255, 255, 0.8);
+    display: block;
+}
+
+/* Ensure navigation line is 300px on desktop */
+@media (min-width: 769px) {
+    .hero-nav::after {
+        width: 300px !important;
+    }
+    
+    .separator {
+        width: 300px !important;
+    }
+    
+    #footer-section::before {
+        width: 300px !important;
+    }
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -504,7 +520,7 @@ footer {
 }
 
 /* Landscape/Horizontal mobile orientation fixes */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
     /* Reduce bottom padding since footer is no longer fixed */
     main {
         padding-bottom: 50px !important;
