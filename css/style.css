@@ -278,14 +278,16 @@ footer {
 
 /* Footer section styling */
 #footer-section {
-    z-index: 100 !important;
+    z-index: 1000 !important;
+    pointer-events: none;
 }
 
-/* Make footer icons clickable with higher z-index */
+/* Make footer icons clickable with very high z-index */
 .social-links {
     margin-bottom: 0.5rem;
     position: relative;
-    z-index: 150;
+    z-index: 1001;
+    pointer-events: auto;
 }
 
 .social-links a {
@@ -297,7 +299,7 @@ footer {
     cursor: pointer;
     text-decoration: none;
     position: relative;
-    z-index: 150;
+    z-index: 1001;
 }
 
 .social-links a:hover {
@@ -307,7 +309,8 @@ footer {
 /* Footer text also needs higher z-index */
 #footer-section p {
     position: relative;
-    z-index: 150;
+    z-index: 1001;
+    pointer-events: auto;
 }
 
 .hero-nav {
